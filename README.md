@@ -38,7 +38,7 @@ This will suppress extra draw calls and improve performance.
 ## Demo
 
 * ![demo](https://user-images.githubusercontent.com/12690315/39131616-dcf7ea60-474a-11e8-8e20-f9e5bd8b3f5c.gif)
-    * Only 1 draw call!
+    * Just 1 draw call!
 
 
 
