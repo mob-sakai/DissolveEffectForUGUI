@@ -30,7 +30,7 @@ namespace Coffee.UIExtensions
 		//################################
 		// Serialize Members.
 		//################################
-		[SerializeField] [Range(0, 1)] float m_Location = 0;
+		[SerializeField] [Range(0, 1)] float m_DissolveFactor = 0;
 		[SerializeField] Material m_EffectMaterial;
 
 
@@ -45,7 +45,7 @@ namespace Coffee.UIExtensions
 		/// <summary>
 		/// Location for effect.
 		/// </summary>
-		public float location { get { return m_Location; } set { m_Location = Mathf.Clamp(value, 0, 1); _SetDirty(); } }
+		public float dissolveFactor { get { return m_DissolveFactor; } set { m_DissolveFactor = Mathf.Clamp(value, 0, 1); _SetDirty(); } }
 
 		/// <summary>
 		/// Effect material.
@@ -129,7 +129,7 @@ namespace Coffee.UIExtensions
 
 				var x = Mathf.Clamp01 (vertex.position.x / rect.width + 0.5f);
 				var y = Mathf.Clamp01 (vertex.position.y / rect.height + 0.5f);
-				vertex.uv1 = new Vector2 (_PackToFloat (x, y, location), 0);
+				vertex.uv1 = new Vector2 (_PackToFloat (x, y, dissolveFactor), 0);
 
 				vh.SetUIVertex(vertex, i);
 			}

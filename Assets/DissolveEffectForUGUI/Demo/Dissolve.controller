@@ -34,7 +34,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_Location
+    attribute: m_DissolveFactor
     path: A
     classID: 114
     script: {fileID: 11500000, guid: 7f9a4349581d64dcabe67c494ee1d531, type: 3}
@@ -56,7 +56,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_Location
+    attribute: m_DissolveFactor
     path: B
     classID: 114
     script: {fileID: 11500000, guid: 7f9a4349581d64dcabe67c494ee1d531, type: 3}
@@ -78,7 +78,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_Location
+    attribute: m_DissolveFactor
     path: C
     classID: 114
     script: {fileID: 11500000, guid: 7f9a4349581d64dcabe67c494ee1d531, type: 3}
@@ -100,7 +100,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_Location
+    attribute: m_DissolveFactor
     path: D
     classID: 114
     script: {fileID: 11500000, guid: 7f9a4349581d64dcabe67c494ee1d531, type: 3}
@@ -176,7 +176,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_Location
+    attribute: m_DissolveFactor
     path: A
     classID: 114
     script: {fileID: 11500000, guid: 7f9a4349581d64dcabe67c494ee1d531, type: 3}
@@ -198,7 +198,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_Location
+    attribute: m_DissolveFactor
     path: B
     classID: 114
     script: {fileID: 11500000, guid: 7f9a4349581d64dcabe67c494ee1d531, type: 3}
@@ -220,7 +220,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_Location
+    attribute: m_DissolveFactor
     path: C
     classID: 114
     script: {fileID: 11500000, guid: 7f9a4349581d64dcabe67c494ee1d531, type: 3}
@@ -242,7 +242,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_Location
+    attribute: m_DissolveFactor
     path: D
     classID: 114
     script: {fileID: 11500000, guid: 7f9a4349581d64dcabe67c494ee1d531, type: 3}
