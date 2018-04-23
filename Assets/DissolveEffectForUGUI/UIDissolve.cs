@@ -114,8 +114,7 @@ namespace Coffee.UIExtensions
 		/// </summary>
 		public override void ModifyMesh(VertexHelper vh)
 		{
-
-			if (!IsActive())
+			if (!IsActive() || dissolveFactor <= 0)
 				return;
 
 			// rect.
