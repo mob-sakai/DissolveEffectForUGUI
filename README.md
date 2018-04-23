@@ -4,7 +4,8 @@ DissolveEffectForUGUI
 ### NOTE: This project *will* be merged to [UIEffect](https://github.com/mob-sakai/UIEffect).
 
 A dissolve effect for uGUI, without material instancing.
-![image](https://user-images.githubusercontent.com/12690315/39131615-dccdc2bc-474a-11e8-84b2-0513b64168a7.png)
+
+![image](https://user-images.githubusercontent.com/12690315/39158165-6f8d68fc-4799-11e8-837f-4b74943d3f36.png)
 
 [![](https://img.shields.io/github/release/mob-sakai/DissolveEffectForUGUI.svg?label=latest%20version)](https://github.com/mob-sakai/DissolveEffectForUGUI/release)
 [![](https://img.shields.io/github/release-date/mob-sakai/DissolveEffectForUGUI.svg)](https://github.com/mob-sakai/DissolveEffectForUGUI/releases)
@@ -22,13 +23,17 @@ A dissolve effect for uGUI, without material instancing.
 <br><br><br><br>
 ## Description
 
+![image](https://user-images.githubusercontent.com/12690315/39131615-dccdc2bc-474a-11e8-84b2-0513b64168a7.png)
+
 DissolveEffectForUGUI applies _dissolve-effect_ to uGUI element (Image, RawImage, Text, etc...) **WITHOUT material instancing**.  
 This will suppress extra draw calls and improve performance.
 
-* Noise pattern image
-* Edge width
-* Outer/inner edge color
-* Outer/inner edge softness
+* Parameters
+    * Dissolve factor
+    * Noise pattern image (in material)
+    * Edge width (in material)
+    * Outer/inner edge color (in material)
+    * Outer/inner edge softness (in material)
 
 ![image](https://user-images.githubusercontent.com/12690315/39143377-b9e632c0-4768-11e8-9d26-717304df41fb.png)
 
