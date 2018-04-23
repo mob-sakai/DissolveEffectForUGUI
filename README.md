@@ -30,11 +30,15 @@ This will suppress extra draw calls and improve performance.
 * Outer/inner edge color
 * Outer/inner edge softness
 
+![image](https://user-images.githubusercontent.com/12690315/39143377-b9e632c0-4768-11e8-9d26-717304df41fb.png)
+
+
 
 <br><br><br><br>
 ## Demo
 
-![demo](https://user-images.githubusercontent.com/12690315/39131616-dcf7ea60-474a-11e8-8e20-f9e5bd8b3f5c.gif)
+* ![demo](https://user-images.githubusercontent.com/12690315/39131616-dcf7ea60-474a-11e8-8e20-f9e5bd8b3f5c.gif)
+    * Only 1 draw call!
 
 
 
@@ -44,7 +48,7 @@ This will suppress extra draw calls and improve performance.
 1. Download DissolveEffectForUGUI.unitypackage from [Releases](https://github.com/mob-sakai/DissolveEffectForUGUI/releases).
 1. Import the package into your Unity project. Select `Import Package > Custom Package` from the `Assets` menu.
 1. Add `DissolveEffectForUGUI` component to UI element (Image, RawImage, Text, etc...) from `Add Component` in inspector.
-1. Choose effect type and adjust values in inspector.  
+1. Control effect parameters in inspector.  
 1. Enjoy!
 
 

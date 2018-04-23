@@ -159,4 +159,38 @@ namespace Coffee.UIExtensions
 			+ Mathf.FloorToInt(x * PRECISION);
 		}
 	}
+
+
+	[CanEditMultipleObjects, CustomEditor (typeof(UIDissolve))]
+	public class UIDissolveEditor : Editor
+	{
+		private Editor materialEditor;
+		private Material material;
+
+		void OnDisable()
+		{
+			if (materialEditor) {
+				DestroyImmediate (materialEditor);
+			}
+		}
+
+		public override void OnInspectorGUI ()
+		{
+			base.OnInspectorGUI ();
+
+			var current = target as UIDissolve;
+			if (current.effectMaterial) {
+				if (material != current.effectMaterial) {
+					material = current.effectMaterial;
+					DestroyImmediate (materialEditor);
+				}
+				if (!materialEditor) {
+					materialEditor = Editor.CreateEditor (current.effectMaterial);
+				}
+				materialEditor.DrawHeader ();
+				materialEditor.OnInspectorGUI ();
+			}
+
+		}
+	}
 }
