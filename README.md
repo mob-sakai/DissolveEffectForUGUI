@@ -4,11 +4,12 @@ DissolveEffectForUGUI
 ### NOTE: This project *will* be merged to [UIEffect](https://github.com/mob-sakai/UIEffect).
 
 A dissolve effect for uGUI, without material instancing.
+![image](https://user-images.githubusercontent.com/12690315/39131615-dccdc2bc-474a-11e8-84b2-0513b64168a7.png)
 
 [![](https://img.shields.io/github/release/mob-sakai/DissolveEffectForUGUI.svg?label=latest%20version)](https://github.com/mob-sakai/DissolveEffectForUGUI/release)
-[![](https://img.shields.io/github/release-date/mob-sakai/DissolveEffectForUGUI.svg)](https://github.com/mob-sakai/DissolveEffectForUGUI/releases)  
+[![](https://img.shields.io/github/release-date/mob-sakai/DissolveEffectForUGUI.svg)](https://github.com/mob-sakai/DissolveEffectForUGUI/releases)
 ![](https://img.shields.io/badge/requirement-Unity%205.5%2B-green.svg)
-[![](https://img.shields.io/github/license/mob-sakai/DissolveEffectForUGUI.svg)](https://github.com/mob-sakai/DissolveEffectForUGUI/blob/master/LICENSE.txt)  
+[![](https://img.shields.io/github/license/mob-sakai/DissolveEffectForUGUI.svg)](https://github.com/mob-sakai/DissolveEffectForUGUI/blob/master/LICENSE.txt)
 [![](https://img.shields.io/github/last-commit/mob-sakai/DissolveEffectForUGUI/develop.svg?label=last%20commit)](https://github.com/mob-sakai/DissolveEffectForUGUI/commits/develop)
 [![](https://img.shields.io/github/issues/mob-sakai/DissolveEffectForUGUI.svg)](https://github.com/mob-sakai/DissolveEffectForUGUI/issues)
 [![](https://img.shields.io/github/commits-since/mob-sakai/DissolveEffectForUGUI/latest.svg)](https://github.com/mob-sakai/DissolveEffectForUGUI/compare/master...develop)
@@ -24,10 +25,16 @@ A dissolve effect for uGUI, without material instancing.
 DissolveEffectForUGUI applies _dissolve-effect_ to uGUI element (Image, RawImage, Text, etc...) **WITHOUT material instancing**.  
 This will suppress extra draw calls and improve performance.
 
+* Noise pattern image
+* Edge width
+* Outer/inner edge color
+* Outer/inner edge softness
 
 
 <br><br><br><br>
 ## Demo
+
+![demo](https://user-images.githubusercontent.com/12690315/39131616-dcf7ea60-474a-11e8-8e20-f9e5bd8b3f5c.gif)
 
 
 
@@ -62,6 +69,7 @@ This will suppress extra draw calls and improve performance.
 ## License
 
 * MIT
+* [JewelSaviorFREE](http://www.jewel-s.jp/)
 
 
 
