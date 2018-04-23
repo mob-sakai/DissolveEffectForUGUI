@@ -117,6 +117,12 @@ namespace Coffee.UIExtensions
 			if (!IsActive() || dissolveFactor <= 0)
 				return;
 
+			// Skip process.
+			if (1 <= dissolveFactor) {
+				vh.Clear ();
+				return;
+			}
+
 			// rect.
 			Rect rect = graphic.rectTransform.rect;
 
