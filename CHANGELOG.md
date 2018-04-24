@@ -1,6 +1,15 @@
 # Changelog
 
-## [v0.2.0](https://github.com/mob-sakai/DissolveEffectForUGUI/tree/v0.2.0) (2018-04-24)
+## [v0.3.0](https://github.com/mob-sakai/DissolveEffectForUGUI/tree/v0.3.0) (2018-04-24)
+
+[Full Changelog](https://github.com/mob-sakai/DissolveEffectForUGUI/compare/v0.2.0...v0.3.0)
+
+**Implemented enhancements:**
+
+- Feature: Skip process when dissolve factor equal 1 [\#5](https://github.com/mob-sakai/DissolveEffectForUGUI/issues/5)
+- Feature: Skip process when dissolve factor equal 0 [\#4](https://github.com/mob-sakai/DissolveEffectForUGUI/issues/4)
+
+## [v0.2.0](https://github.com/mob-sakai/DissolveEffectForUGUI/tree/v0.2.0) (2018-04-23)
 
 [Full Changelog](https://github.com/mob-sakai/DissolveEffectForUGUI/compare/v0.1.0...v0.2.0)
 
