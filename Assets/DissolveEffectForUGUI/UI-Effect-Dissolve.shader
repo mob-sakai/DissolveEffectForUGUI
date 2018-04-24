@@ -3,23 +3,26 @@ Shader "UI/Hidden/UI-Effect-Dissolve"
 	Properties
 	{
 		[PerRendererData] _MainTex ("Main Texture", 2D) = "white" {}
-		_Color ("Tint", Color) = (1,1,1,1)
-		
-		_StencilComp ("Stencil Comparison", Float) = 8
-		_Stencil ("Stencil ID", Float) = 0
-		_StencilOp ("Stencil Operation", Float) = 0
-		_StencilWriteMask ("Stencil Write Mask", Float) = 255
-		_StencilReadMask ("Stencil Read Mask", Float) = 255
+		[HideInInspector] _Color ("Tint", Color) = (1,1,1,1)
 
-		_ColorMask ("Color Mask", Float) = 15
+		[HideInInspector] _StencilComp ("Stencil Comparison", Float) = 8
+		[HideInInspector] _Stencil ("Stencil ID", Float) = 0
+		[HideInInspector] _StencilOp ("Stencil Operation", Float) = 0
+		[HideInInspector] _StencilWriteMask ("Stencil Write Mask", Float) = 255
+		[HideInInspector] _StencilReadMask ("Stencil Read Mask", Float) = 255
 
-		[Toggle(UNITY_UI_ALPHACLIP)] _UseUIAlphaClip ("Use Alpha Clip", Float) = 0
+		[HideInInspector] _ColorMask ("Color Mask", Float) = 15
 
-		[Header(Dissolve)]
+		[HideInInspector] [Toggle(UNITY_UI_ALPHACLIP)] _UseUIAlphaClip ("Use Alpha Clip", Float) = 0
+
 		_NoiseTex ("Noise Texture (A)", 2D) = "white" {}
 		_EdgeWidth ("Edge width", Range (0.0001, 1)) = 0.05
+
+		[Header(Outer Setting)]
 		_OuterEdgeColor ("Outer edge color", Color) = (1.0, 0.75, 0.0, 1.0)
 		_OuterSoftness ("Outer softness", Range (0.0001, 1)) = 0.5
+
+		[Header(Inner Setting)]
 		_InnerEdgeColor ("Inner edge color", Color) = (1.0, 0.0, 0.0, 1.0)
 		_InnerSoftness ("Inner softness", Range (0.0001, 1)) = 0.5
 	}

@@ -30,7 +30,7 @@ namespace Coffee.UIExtensions
 		//################################
 		// Serialize Members.
 		//################################
-		[SerializeField] [Range(0, 1)] float m_Location = 0;
+		[SerializeField] [Range(0, 1)] float m_DissolveFactor = 0;
 		[SerializeField] Material m_EffectMaterial;
 
 
@@ -45,7 +45,7 @@ namespace Coffee.UIExtensions
 		/// <summary>
 		/// Location for effect.
 		/// </summary>
-		public float location { get { return m_Location; } set { m_Location = Mathf.Clamp(value, 0, 1); _SetDirty(); } }
+		public float dissolveFactor { get { return m_DissolveFactor; } set { m_DissolveFactor = Mathf.Clamp(value, 0, 1); _SetDirty(); } }
 
 		/// <summary>
 		/// Effect material.
@@ -114,9 +114,14 @@ namespace Coffee.UIExtensions
 		/// </summary>
 		public override void ModifyMesh(VertexHelper vh)
 		{
-
-			if (!IsActive())
+			if (!IsActive() || dissolveFactor <= 0)
 				return;
+
+			// Skip process.
+			if (1 <= dissolveFactor) {
+				vh.Clear ();
+				return;
+			}
 
 			// rect.
 			Rect rect = graphic.rectTransform.rect;
@@ -129,7 +134,7 @@ namespace Coffee.UIExtensions
 
 				var x = Mathf.Clamp01 (vertex.position.x / rect.width + 0.5f);
 				var y = Mathf.Clamp01 (vertex.position.y / rect.height + 0.5f);
-				vertex.uv1 = new Vector2 (_PackToFloat (x, y, location), 0);
+				vertex.uv1 = new Vector2 (_PackToFloat (x, y, dissolveFactor), 0);
 
 				vh.SetUIVertex(vertex, i);
 			}
@@ -157,6 +162,40 @@ namespace Coffee.UIExtensions
 			return (Mathf.FloorToInt(z * PRECISION) << 16)
 			+ (Mathf.FloorToInt(y * PRECISION) << 8)
 			+ Mathf.FloorToInt(x * PRECISION);
+		}
+	}
+
+
+	[CanEditMultipleObjects, CustomEditor (typeof(UIDissolve))]
+	public class UIDissolveEditor : Editor
+	{
+		private Editor materialEditor;
+		private Material material;
+
+		void OnDisable()
+		{
+			if (materialEditor) {
+				DestroyImmediate (materialEditor);
+			}
+		}
+
+		public override void OnInspectorGUI ()
+		{
+			base.OnInspectorGUI ();
+
+			var current = target as UIDissolve;
+			if (current.effectMaterial) {
+				if (material != current.effectMaterial) {
+					material = current.effectMaterial;
+					DestroyImmediate (materialEditor);
+				}
+				if (!materialEditor) {
+					materialEditor = Editor.CreateEditor (current.effectMaterial);
+				}
+				materialEditor.DrawHeader ();
+				materialEditor.OnInspectorGUI ();
+			}
+
 		}
 	}
 }
