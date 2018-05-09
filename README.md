@@ -1,7 +1,7 @@
 DissolveEffectForUGUI
 ===
 
-### NOTE: This project *will* be merged to [UIEffect](https://github.com/mob-sakai/UIEffect).
+### NOTE: This project has been merged to [UIEffect](https://github.com/mob-sakai/UIEffect).
 
 A dissolve effect for uGUI, without material instancing.
 
