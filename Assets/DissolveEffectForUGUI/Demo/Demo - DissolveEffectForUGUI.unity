@@ -125,7 +125,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 778.82715, y: -264.04608}
+  m_AnchoredPosition: {x: 778.82715, y: -312.9892}
   m_SizeDelta: {x: 0, y: 192.24692}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3405602
@@ -152,12 +152,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f9a4349581d64dcabe67c494ee1d531, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Location: 0.5
-  m_Width: 0.5
-  m_Softness: 0.5
+  m_Location: 0.638
+  m_Width: 0.558
+  m_Softness: 0.92
   m_Color: {r: 0, g: 0.25, b: 1, a: 1}
-  m_ColorMode: 3
-  m_EffectMaterial: {fileID: 21721019877632072, guid: 2ac9a8033337c4b908c54c087abd31e8,
+  m_ColorMode: 2
+  m_EffectMaterial: {fileID: 21068288719974348, guid: 2ac9a8033337c4b908c54c087abd31e8,
     type: 2}
 --- !u!114 &3405605
 MonoBehaviour:
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 21721019877632072, guid: 2ac9a8033337c4b908c54c087abd31e8,
+  m_Material: {fileID: 21068288719974348, guid: 2ac9a8033337c4b908c54c087abd31e8,
     type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
@@ -261,7 +261,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 111.26102, y: -264.04608}
+  m_AnchoredPosition: {x: 111.26102, y: -312.9892}
   m_SizeDelta: {x: 0, y: 192.24692}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &183310804
@@ -288,12 +288,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f9a4349581d64dcabe67c494ee1d531, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Location: 0.493
-  m_Width: 0.5
-  m_Softness: 0.5
+  m_Location: 0
+  m_Width: 0.558
+  m_Softness: 0.92
   m_Color: {r: 0, g: 0.25, b: 1, a: 1}
-  m_ColorMode: 0
-  m_EffectMaterial: {fileID: 2100000, guid: 2ac9a8033337c4b908c54c087abd31e8, type: 2}
+  m_ColorMode: 2
+  m_EffectMaterial: {fileID: 21068288719974348, guid: 2ac9a8033337c4b908c54c087abd31e8,
+    type: 2}
 --- !u!114 &183310807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,7 +306,8 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 2ac9a8033337c4b908c54c087abd31e8, type: 2}
+  m_Material: {fileID: 21068288719974348, guid: 2ac9a8033337c4b908c54c087abd31e8,
+    type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
@@ -603,7 +605,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 333.78305, y: -264.04608}
+  m_AnchoredPosition: {x: 333.78305, y: -312.9892}
   m_SizeDelta: {x: 0, y: 192.24692}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &886192400
@@ -630,9 +632,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f9a4349581d64dcabe67c494ee1d531, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Location: 0.5
-  m_Width: 0.5
-  m_Softness: 0.5
+  m_Location: 0.37
+  m_Width: 0.558
+  m_Softness: 0.92
   m_Color: {r: 0, g: 0.25, b: 1, a: 1}
   m_ColorMode: 2
   m_EffectMaterial: {fileID: 21068288719974348, guid: 2ac9a8033337c4b908c54c087abd31e8,
@@ -860,7 +862,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 556.30505, y: -264.04608}
+  m_AnchoredPosition: {x: 556.30505, y: -312.9892}
   m_SizeDelta: {x: 0, y: 192.24692}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1047477992
@@ -887,12 +889,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f9a4349581d64dcabe67c494ee1d531, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Location: 0.5
-  m_Width: 0.5
-  m_Softness: 0.5
+  m_Location: 0.413
+  m_Width: 0.558
+  m_Softness: 0.92
   m_Color: {r: 0, g: 0.25, b: 1, a: 1}
-  m_ColorMode: 1
-  m_EffectMaterial: {fileID: 21237785833609848, guid: 2ac9a8033337c4b908c54c087abd31e8,
+  m_ColorMode: 2
+  m_EffectMaterial: {fileID: 21068288719974348, guid: 2ac9a8033337c4b908c54c087abd31e8,
     type: 2}
 --- !u!114 &1047477995
 MonoBehaviour:
@@ -905,7 +907,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 21237785833609848, guid: 2ac9a8033337c4b908c54c087abd31e8,
+  m_Material: {fileID: 21068288719974348, guid: 2ac9a8033337c4b908c54c087abd31e8,
     type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
