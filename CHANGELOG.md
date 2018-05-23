@@ -1,5 +1,13 @@
 # Changelog
 
+## [v0.4.0](https://github.com/mob-sakai/DissolveEffectForUGUI/tree/v0.4.0) (2018-05-23)
+
+[Full Changelog](https://github.com/mob-sakai/DissolveEffectForUGUI/compare/v0.3.0...v0.4.0)
+
+**Implemented enhancements:**
+
+- Feature: Add color mode option [\#6](https://github.com/mob-sakai/DissolveEffectForUGUI/issues/6)
+
 ## [v0.3.0](https://github.com/mob-sakai/DissolveEffectForUGUI/tree/v0.3.0) (2018-04-24)
 
 [Full Changelog](https://github.com/mob-sakai/DissolveEffectForUGUI/compare/v0.2.0...v0.3.0)
