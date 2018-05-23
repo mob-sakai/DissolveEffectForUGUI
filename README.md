@@ -1,11 +1,11 @@
 DissolveEffectForUGUI
 ===
 
-### NOTE: This project *will* be merged to [UIEffect](https://github.com/mob-sakai/UIEffect).
+### NOTE: This project has been merged to [UIEffect](https://github.com/mob-sakai/UIEffect).
 
 A dissolve effect for uGUI, without material instancing.
 
-![image](https://user-images.githubusercontent.com/12690315/39158165-6f8d68fc-4799-11e8-837f-4b74943d3f36.png)
+![image](https://user-images.githubusercontent.com/12690315/40378145-a7c0c8e0-5e2d-11e8-8cdd-70e40bcf0c71.png)
 
 [![](https://img.shields.io/github/release/mob-sakai/DissolveEffectForUGUI.svg?label=latest%20version)](https://github.com/mob-sakai/DissolveEffectForUGUI/release)
 [![](https://img.shields.io/github/release-date/mob-sakai/DissolveEffectForUGUI.svg)](https://github.com/mob-sakai/DissolveEffectForUGUI/releases)
@@ -23,20 +23,29 @@ A dissolve effect for uGUI, without material instancing.
 <br><br><br><br>
 ## Description
 
-![image](https://user-images.githubusercontent.com/12690315/39131615-dccdc2bc-474a-11e8-84b2-0513b64168a7.png)
+![image](https://user-images.githubusercontent.com/12690315/40378124-978278e8-5e2d-11e8-9b16-96aaa8c7bc87.png)
 
 DissolveEffectForUGUI applies _dissolve-effect_ to uGUI element (Image, RawImage, Text, etc...) **WITHOUT material instancing**.  
 This will suppress extra draw calls and improve performance.
 
 * Parameters
-    * Dissolve factor
+    * Dissolve factor (inspector, script, animation)
+    * Edge width (inspector, script, animation)
+    * Edge color (inspector, script, animation)
+    * Edge softness (inspector, script, animation)
     * Noise pattern image (in material)
-    * Edge width (in material)
-    * Outer/inner edge color (in material)
-    * Outer/inner edge softness (in material)
 
-![image](https://user-images.githubusercontent.com/12690315/39143377-b9e632c0-4768-11e8-9d26-717304df41fb.png)
 
+
+### New feature in v0.4.0
+
+From [UIEffect v2.4.0](https://github.com/mob-sakai/UIEffect)
+
+![v2.4.0](https://user-images.githubusercontent.com/12690315/40294019-a0bfb8aa-5d0e-11e8-8451-873502db6a99.gif)
+![editor](https://user-images.githubusercontent.com/12690315/40294212-9e1b1ce2-5d0f-11e8-88ce-78a8c0523dc2.png)
+
+* UIDissolve: Add color mode option.
+* UIDissolve: You can change the edge color, width, softness, color mode in inspector.
 
 
 <br><br><br><br>
@@ -45,6 +54,7 @@ This will suppress extra draw calls and improve performance.
 * ![demo](https://user-images.githubusercontent.com/12690315/39131616-dcf7ea60-474a-11e8-8e20-f9e5bd8b3f5c.gif)
     * Just 1 draw call!
 
+[WebGL Demo](http://mob-sakai.github.io/DissolveEffectForUGUI)
 
 
 <br><br><br><br>

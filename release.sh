@@ -20,11 +20,20 @@ read -p "[? release version (for example: 1.0.0): " RELEASE_VERSION
 
 
 # update version in package.json
+echo -e "\n>> Update version... package.json"
 git checkout -B release develop
 sed -i -e "s/\"version\": \(.*\)/\"version\": \"${RELEASE_VERSION}\",/g" package.json
 
 
+# check unity editor
+UNITY_VER=`sed -e "s/m_EditorVersion: \(.*\)/\1/g" ProjectSettings/ProjectVersion.txt`
+UNITY_EDITOR="/Applications/Unity/Hub/Editor/${UNITY_VER}/Unity.app/Contents/MacOS/Unity"
+echo -e "\n>> Check unity editor... ${UNITY_VER} (${UNITY_EDITOR})"
+"$UNITY_EDITOR" -quit -batchmode -projectPath "`pwd`"
+echo -e ">> OK"
+
 # generate change log
+echo -e "\n>> Generate change log..."
 TAG=v$RELEASE_VERSION
 git tag $TAG
 git push --tags
@@ -32,33 +41,38 @@ github_changelog_generator
 git tag -d $TAG
 git push --delete origin $TAG
 
-
 git diff -- CHANGELOG.md
-read -p "[? continue? (y/N):" yn
+read -p "[? is the change log correct? (y/N):" yn
 case "$yn" in [yY]*) ;; *) exit ;; esac
 
 
 # export unitypackage
-UNITY_EDITOR=`node -pe 'require("./package.json").unity'`
 PACKAGE_SRC=`node -pe 'require("./package.json").src'`
+echo -e "\n>> Export unitypackage... ${PACKAGE_SRC}"
 "$UNITY_EDITOR" -quit -batchmode -projectPath "`pwd`" -exportpackage "$PACKAGE_SRC" "$PACKAGE_NAME.unitypackage"
+echo -e ">> OK"
 
 
-# commit files
+# commit release files
+echo -e "\n>> Commit release files..."
 git add CHANGELOG.md -f
 git add package.json -f
 git commit -m "update change log"
 
 
 # merge and push
+echo -e "\n>> Merge and push..."
 git checkout master
 git merge --no-ff release -m "release $TAG"
 git branch -D release
 git push origin master
+git checkout develop
+git merge --ff master
+git push origin develop
 
 
 # upload unitypackage and release on Github
-gh-release  --draft --assets "$PACKAGE_NAME.unitypackage"
+gh-release  --assets "$PACKAGE_NAME.unitypackage"
 
 
-echo "\n\n$PACKAGE_NAME v$RELEASE_VERSION has been successfully released!\n"
+echo -e "\n\n>> $PACKAGE_NAME v$RELEASE_VERSION has been successfully released!\n"
