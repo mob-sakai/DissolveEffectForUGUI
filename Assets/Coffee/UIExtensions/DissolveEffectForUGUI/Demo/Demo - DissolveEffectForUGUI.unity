@@ -152,13 +152,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce76b7a490bd74f34a2f2752641aea24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectMaterial: {fileID: 21939717441729078, guid: 17b17d6effbe14075a3bbdf1fda1f6e1,
+  m_EffectMaterial: {fileID: 21841578701121694, guid: 17b17d6effbe14075a3bbdf1fda1f6e1,
     type: 2}
-  m_Location: 0.638
-  m_Width: 0.558
-  m_Softness: 0.92
+  m_Location: 0.413
+  m_Width: 0.188
+  m_Softness: 0.522
   m_Color: {r: 0, g: 0.25, b: 1, a: 1}
-  m_ColorMode: 2
+  m_ColorMode: 3
   m_Play: 0
   m_Duration: 1
   m_UpdateMode: 0
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 21939717441729078, guid: 17b17d6effbe14075a3bbdf1fda1f6e1,
+  m_Material: {fileID: 21841578701121694, guid: 17b17d6effbe14075a3bbdf1fda1f6e1,
     type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1

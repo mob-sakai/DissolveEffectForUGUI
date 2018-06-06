@@ -1,9 +1,6 @@
 #ifndef UI_EFFECT_INCLUDED
 #define UI_EFFECT_INCLUDED
 
-//################################
-// Define
-//################################
 #define PACKER_STEP 64
 
 #if GRAYSCALE | SEPIA | NEGA | PIXEL | MONO | CUTOFF | HUE
@@ -18,9 +15,6 @@
 #define UI_BLUR
 #endif
 
-//################################
-// Unpacker to vector
-//################################
 // Unpack float to low-precision [0-1] fixed4. 
 fixed4 UnpackToVec4(float value)
 {   
@@ -40,9 +34,6 @@ fixed4 UnpackToVec4(float value)
     return color;
 }
 
-//################################
-// Blur effect
-//################################
 // Calculate blur effect.
 // Sample texture by blured uv, with bias.
 fixed4 Blur(sampler2D tex, half2 uv, half2 addUv, half bias)
@@ -93,9 +84,6 @@ fixed4 Tex2DBlurring(sampler2D tex, half2 uv, half2 blur)
 	#endif
 }
 
-//################################
-// Tone effect
-//################################
 fixed3 shift_hue(fixed3 RGB, half VSU, half VSW)
 {
 	fixed3 result;
@@ -130,10 +118,6 @@ fixed4 ApplyToneEffect(fixed4 color, fixed factor)
 	return color;
 }
 
-
-//################################
-// Color effect
-//################################
 // Apply color effect.
 half4 ApplyColorEffect(half4 color, half4 factor)
 {

@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-#if UNITY_EDITOR
-using System.IO;
-using System.Linq;
-using UnityEditor;
-#endif
 
 namespace Coffee.UIExtensions
 {
@@ -31,7 +24,7 @@ namespace Coffee.UIExtensions
 		[SerializeField] [Range(0, 1)] float m_Softness = 0.5f;
 		[SerializeField] [ColorUsage(false)] Color m_Color = new Color(0.0f, 0.25f, 1.0f);
 		[SerializeField] ColorMode m_ColorMode = ColorMode.Add;
-		[Space]
+		[Header("Play Effect")]
 		[SerializeField] bool m_Play = false;
 		[SerializeField][Range(0.1f, 10)] float m_Duration = 1;
 		[SerializeField] AnimatorUpdateMode m_UpdateMode = AnimatorUpdateMode.Normal;
@@ -40,10 +33,6 @@ namespace Coffee.UIExtensions
 		//################################
 		// Public Members.
 		//################################
-		/// <summary>
-		/// Target graphic for the effect.
-		/// </summary>
-		public Graphic targetGraphic { get { return graphic; } }
 
 		/// <summary>
 		/// Current location[0-1] for dissolve effect. 0 is not dissolved, 1 is completely dissolved.

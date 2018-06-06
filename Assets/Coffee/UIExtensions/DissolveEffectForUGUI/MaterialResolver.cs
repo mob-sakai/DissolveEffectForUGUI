@@ -1,11 +1,9 @@
 ﻿#if UNITY_EDITOR
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using System.IO;
+using System.Linq;
 using System.Text;
 using UnityEditor;
-using System.Linq;
+using UnityEngine;
 
 namespace Coffee.UIExtensions
 {
@@ -19,19 +17,24 @@ namespace Coffee.UIExtensions
 				return null;
 			}
 
+			string[] keywords = append.Where (x => 0 < (int)x)
+				.Select (x => x.ToString ().ToUpper ())
+				.ToArray ();
 			Material mat = GetMaterial (shader, append);
 			if (mat) {
+				if(!mat.shaderKeywords.SequenceEqual(keywords))
+				{
+					mat.shaderKeywords = keywords;
+					EditorUtility.SetDirty (mat);
+					AssetDatabase.SaveAssets ();
+				}
 				return mat;
 			}
 
 			var variantName = GetVariantName (shader, append);
 			Debug.Log ("Generate material : " + variantName);
 			mat = new Material (shader);
-
-
-			foreach (object mode in append.Where(x=>0<(int)x)) {
-				mat.EnableKeyword (mode.ToString ().ToUpper ());
-			}
+			mat.shaderKeywords = keywords;
 
 			mat.name = variantName;
 			mat.hideFlags |= HideFlags.NotEditable;
