@@ -60,6 +60,7 @@ Shader "UI/Hidden/UI-Effect-Dissolve"
 
 			#include "UnityCG.cginc"
 			#include "UnityUI.cginc"
+			#include "UI-Effect.cginc"
 
 			struct appdata_t
 			{
@@ -89,45 +90,6 @@ Shader "UI/Hidden/UI-Effect-Dissolve"
 			sampler2D _MainTex;
 			sampler2D _NoiseTex;
 
-			// Unpack float to low-precision [0-1] fixed4. 
-			fixed4 UnpackToVec4(float value)
-			{
-				const int PACKER_STEP = 64;
-				const int PRECISION = PACKER_STEP - 1;
-				fixed4 color;
-
-				color.r = (value % PACKER_STEP) / PRECISION;
-				value = floor(value / PACKER_STEP);
-
-				color.g = (value % PACKER_STEP) / PRECISION;
-				value = floor(value / PACKER_STEP);
-
-				color.b = (value % PACKER_STEP) / PRECISION;
-				value = floor(value / PACKER_STEP);
-
-				color.a = (value % PACKER_STEP) / PRECISION;
-				return color;
-			}
-
-			// Apply color effect.
-			fixed4 ApplyColorEffect(fixed4 color, fixed4 factor)
-			{
-				#ifdef UI_COLOR_SET // Set
-				color.rgb = lerp(color.rgb, factor.rgb, factor.a);
-
-				#elif UI_COLOR_ADD // Add
-				color.rgb += factor.rgb * factor.a;
-
-				#elif UI_COLOR_SUB // Sub
-				color.rgb -= factor.rgb * factor.a;
-
-				#else
-				color.rgb = lerp(color.rgb, color.rgb * factor.rgb, factor.a);
-				#endif
-
-				return color;
-			}
-
 			v2f vert(appdata_t IN)
 			{
 				v2f OUT;
@@ -156,13 +118,15 @@ Shader "UI/Hidden/UI-Effect-Dissolve"
 				color.a *= UnityGet2DClipping(IN.worldPosition.xy, _ClipRect);
 
 				float cutout = tex2D(_NoiseTex, IN.effectFactor.xy).a;
-				fixed factor = cutout - IN.effectFactor.z;
+				float location = IN.effectFactor.z;
+				float width = IN.effectFactor.w/4;
+				float factor = cutout - location * ( 1 + width ) + width;
 
 				#ifdef UNITY_UI_ALPHACLIP
 				clip (min(color.a - 0.01, factor));
 				#endif
 
-				fixed edgeLerp = step(cutout, color.a) * saturate((IN.effectFactor.w/4 - factor)*16/ IN.effectFactor2.w);
+				fixed edgeLerp = step(factor, color.a) * saturate((width - factor)*16/ IN.effectFactor2.w);
 				color = ApplyColorEffect(color, fixed4(IN.effectFactor2.rgb, edgeLerp));
 				color.a *= saturate((factor)*32/ IN.effectFactor2.w);
 

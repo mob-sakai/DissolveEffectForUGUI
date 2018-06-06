@@ -149,7 +149,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3405600}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f9a4349581d64dcabe67c494ee1d531, type: 3}
+  m_Script: {fileID: 11500000, guid: ce76b7a490bd74f34a2f2752641aea24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Location: 0.638
@@ -157,8 +157,11 @@ MonoBehaviour:
   m_Softness: 0.92
   m_Color: {r: 0, g: 0.25, b: 1, a: 1}
   m_ColorMode: 2
-  m_EffectMaterial: {fileID: 21068288719974348, guid: 2ac9a8033337c4b908c54c087abd31e8,
+  m_EffectMaterial: {fileID: 21939717441729078, guid: 17b17d6effbe14075a3bbdf1fda1f6e1,
     type: 2}
+  m_Play: 0
+  m_Duration: 1
+  m_UpdateMode: 0
 --- !u!114 &3405605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,7 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 21068288719974348, guid: 2ac9a8033337c4b908c54c087abd31e8,
+  m_Material: {fileID: 21939717441729078, guid: 17b17d6effbe14075a3bbdf1fda1f6e1,
     type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
@@ -285,7 +288,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 183310802}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f9a4349581d64dcabe67c494ee1d531, type: 3}
+  m_Script: {fileID: 11500000, guid: ce76b7a490bd74f34a2f2752641aea24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Location: 0
@@ -293,8 +296,11 @@ MonoBehaviour:
   m_Softness: 0.92
   m_Color: {r: 0, g: 0.25, b: 1, a: 1}
   m_ColorMode: 2
-  m_EffectMaterial: {fileID: 21068288719974348, guid: 2ac9a8033337c4b908c54c087abd31e8,
+  m_EffectMaterial: {fileID: 21939717441729078, guid: 17b17d6effbe14075a3bbdf1fda1f6e1,
     type: 2}
+  m_Play: 0
+  m_Duration: 1
+  m_UpdateMode: 0
 --- !u!114 &183310807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,7 +312,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 21068288719974348, guid: 2ac9a8033337c4b908c54c087abd31e8,
+  m_Material: {fileID: 21939717441729078, guid: 17b17d6effbe14075a3bbdf1fda1f6e1,
     type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
@@ -629,7 +635,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 886192398}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f9a4349581d64dcabe67c494ee1d531, type: 3}
+  m_Script: {fileID: 11500000, guid: ce76b7a490bd74f34a2f2752641aea24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Location: 0.37
@@ -637,8 +643,11 @@ MonoBehaviour:
   m_Softness: 0.92
   m_Color: {r: 0, g: 0.25, b: 1, a: 1}
   m_ColorMode: 2
-  m_EffectMaterial: {fileID: 21068288719974348, guid: 2ac9a8033337c4b908c54c087abd31e8,
+  m_EffectMaterial: {fileID: 21939717441729078, guid: 17b17d6effbe14075a3bbdf1fda1f6e1,
     type: 2}
+  m_Play: 0
+  m_Duration: 1
+  m_UpdateMode: 0
 --- !u!114 &886192403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -650,7 +659,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 21068288719974348, guid: 2ac9a8033337c4b908c54c087abd31e8,
+  m_Material: {fileID: 21939717441729078, guid: 17b17d6effbe14075a3bbdf1fda1f6e1,
     type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
@@ -886,7 +895,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1047477990}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f9a4349581d64dcabe67c494ee1d531, type: 3}
+  m_Script: {fileID: 11500000, guid: ce76b7a490bd74f34a2f2752641aea24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Location: 0.413
@@ -894,8 +903,11 @@ MonoBehaviour:
   m_Softness: 0.92
   m_Color: {r: 0, g: 0.25, b: 1, a: 1}
   m_ColorMode: 2
-  m_EffectMaterial: {fileID: 21068288719974348, guid: 2ac9a8033337c4b908c54c087abd31e8,
+  m_EffectMaterial: {fileID: 21939717441729078, guid: 17b17d6effbe14075a3bbdf1fda1f6e1,
     type: 2}
+  m_Play: 0
+  m_Duration: 1
+  m_UpdateMode: 0
 --- !u!114 &1047477995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -907,7 +919,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 21068288719974348, guid: 2ac9a8033337c4b908c54c087abd31e8,
+  m_Material: {fileID: 21939717441729078, guid: 17b17d6effbe14075a3bbdf1fda1f6e1,
     type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
