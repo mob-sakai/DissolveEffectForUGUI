@@ -12,14 +12,10 @@ using UnityEditor;
 namespace Coffee.UIExtensions
 {
 	/// <summary>
-	/// UIDissolve.
+	/// Dissolve effect for uGUI.
 	/// </summary>
 	[ExecuteInEditMode]
-	[DisallowMultipleComponent]
-	public class UIDissolve : BaseMeshEffect
-#if UNITY_EDITOR
-		, ISerializationCallbackReceiver
-#endif
+	public class UIDissolve : UIEffectBase
 	{
 		//################################
 		// Constant or Static Members.
@@ -35,7 +31,7 @@ namespace Coffee.UIExtensions
 		[SerializeField] [Range(0, 1)] float m_Softness = 0.5f;
 		[SerializeField] [ColorUsage(false)] Color m_Color = new Color(0.0f, 0.25f, 1.0f);
 		[SerializeField] ColorMode m_ColorMode = ColorMode.Add;
-		[SerializeField] Material m_EffectMaterial;
+//		[SerializeField] Material m_EffectMaterial;
 		[Space]
 		[SerializeField] bool m_Play = false;
 		[SerializeField][Range(0.1f, 10)] float m_Duration = 1;
@@ -122,10 +118,10 @@ namespace Coffee.UIExtensions
 		/// </summary>
 		public ColorMode colorMode { get { return m_ColorMode; } }
 
-		/// <summary>
-		/// Effect material.
-		/// </summary>
-		public virtual Material effectMaterial { get { return m_EffectMaterial; } }
+//		/// <summary>
+//		/// Effect material.
+//		/// </summary>
+//		public virtual Material effectMaterial { get { return m_EffectMaterial; } }
 
 		/// <summary>
 		/// Play dissolve on enable.
@@ -148,50 +144,50 @@ namespace Coffee.UIExtensions
 		protected override void OnEnable()
 		{
 			_time = 0;
-			targetGraphic.material = effectMaterial;
 			base.OnEnable();
 		}
 
-		/// <summary>
-		/// This function is called when the behaviour becomes disabled () or inactive.
-		/// </summary>
-		protected override void OnDisable()
-		{
-			targetGraphic.material = null;
-			base.OnDisable();
-		}
+//		/// <summary>
+//		/// This function is called when the behaviour becomes disabled () or inactive.
+//		/// </summary>
+//		protected override void OnDisable()
+//		{
+//			targetGraphic.material = null;
+//			base.OnDisable();
+//		}
 
 #if UNITY_EDITOR
-		protected override void OnValidate ()
+//		protected override void OnValidate ()
+//		{
+//			base.OnValidate ();
+//			EditorApplication.delayCall += () => UpdateMaterial(false);
+//		}
+//
+//		public override void OnAfterDeserialize()
+//		{
+//			EditorApplication.delayCall += () => UpdateMaterial (true);
+//		}
+//
+//		void UpdateMaterial(bool onlyEditMode)
+//		{
+//			if(!this || onlyEditMode && Application.isPlaying)
+//			{
+//				return;
+//			}
+//
+//			var mat = MaterialResolver.GetOrGenerateMaterialVariant(Shader.Find(shaderName), ToneMode.None, m_ColorMode, BlurMode.None);
+//
+//			if (m_EffectMaterial != mat || targetGraphic.material != mat)
+//			{
+//				targetGraphic.material = m_EffectMaterial = mat;
+//				EditorUtility.SetDirty(this);
+//				EditorUtility.SetDirty(targetGraphic);
+//			}
+//		}
+
+		protected override Material GetMaterial ()
 		{
-			base.OnValidate ();
-			EditorApplication.delayCall += () => UpdateMaterial(false);
-		}
-
-		public void OnBeforeSerialize()
-		{
-		}
-
-		public void OnAfterDeserialize()
-		{
-			EditorApplication.delayCall += () => UpdateMaterial (true);
-		}
-
-		void UpdateMaterial(bool onlyEditMode)
-		{
-			if(!this || onlyEditMode && Application.isPlaying)
-			{
-				return;
-			}
-
-			var mat = MaterialResolver.GetOrGenerateMaterialVariant(Shader.Find(shaderName), ToneMode.None, m_ColorMode, BlurMode.None);
-
-			if (m_EffectMaterial != mat || targetGraphic.material != mat)
-			{
-				targetGraphic.material = m_EffectMaterial = mat;
-				EditorUtility.SetDirty(this);
-				EditorUtility.SetDirty(targetGraphic);
-			}
+			return MaterialResolver.GetOrGenerateMaterialVariant(Shader.Find(shaderName), m_ColorMode);
 		}
 #endif
 
@@ -254,15 +250,6 @@ namespace Coffee.UIExtensions
 				m_Play = false;
 				_time = 0;
 			}
-		}
-
-		/// <summary>
-		/// Mark the UIEffect as dirty.
-		/// </summary>
-		void SetDirty()
-		{
-			if (targetGraphic)
-				targetGraphic.SetVerticesDirty();
 		}
 	}
 }

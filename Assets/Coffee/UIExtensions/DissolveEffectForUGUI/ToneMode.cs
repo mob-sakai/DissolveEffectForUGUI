@@ -1,17 +1,17 @@
 ﻿namespace Coffee.UIExtensions
 {
 	/// <summary>
-	/// Tone effect mode.
+	/// Effect mode.
 	/// </summary>
 	public enum ToneMode
 	{
 		None = 0,
-		Grayscale,
-		Sepia,
-		Nega,
-		Pixel,
-		Mono,
-		Cutoff,
-		Hue,
+		Grayscale = 1,
+		Sepia = 2,
+		Nega = 3,
+		Pixel = 4,
+		Mono = 5,
+		Cutoff = 6,
+		Hue = 7,
 	}
 }

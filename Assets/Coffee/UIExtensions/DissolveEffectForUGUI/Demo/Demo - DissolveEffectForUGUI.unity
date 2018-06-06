@@ -152,13 +152,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce76b7a490bd74f34a2f2752641aea24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_EffectMaterial: {fileID: 21939717441729078, guid: 17b17d6effbe14075a3bbdf1fda1f6e1,
+    type: 2}
   m_Location: 0.638
   m_Width: 0.558
   m_Softness: 0.92
   m_Color: {r: 0, g: 0.25, b: 1, a: 1}
   m_ColorMode: 2
-  m_EffectMaterial: {fileID: 21939717441729078, guid: 17b17d6effbe14075a3bbdf1fda1f6e1,
-    type: 2}
   m_Play: 0
   m_Duration: 1
   m_UpdateMode: 0
@@ -291,13 +291,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce76b7a490bd74f34a2f2752641aea24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_EffectMaterial: {fileID: 21939717441729078, guid: 17b17d6effbe14075a3bbdf1fda1f6e1,
+    type: 2}
   m_Location: 0
   m_Width: 0.558
   m_Softness: 0.92
   m_Color: {r: 0, g: 0.25, b: 1, a: 1}
   m_ColorMode: 2
-  m_EffectMaterial: {fileID: 21939717441729078, guid: 17b17d6effbe14075a3bbdf1fda1f6e1,
-    type: 2}
   m_Play: 0
   m_Duration: 1
   m_UpdateMode: 0
@@ -638,13 +638,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce76b7a490bd74f34a2f2752641aea24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_EffectMaterial: {fileID: 21939717441729078, guid: 17b17d6effbe14075a3bbdf1fda1f6e1,
+    type: 2}
   m_Location: 0.37
   m_Width: 0.558
   m_Softness: 0.92
   m_Color: {r: 0, g: 0.25, b: 1, a: 1}
   m_ColorMode: 2
-  m_EffectMaterial: {fileID: 21939717441729078, guid: 17b17d6effbe14075a3bbdf1fda1f6e1,
-    type: 2}
   m_Play: 0
   m_Duration: 1
   m_UpdateMode: 0
@@ -898,13 +898,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce76b7a490bd74f34a2f2752641aea24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_EffectMaterial: {fileID: 21939717441729078, guid: 17b17d6effbe14075a3bbdf1fda1f6e1,
+    type: 2}
   m_Location: 0.413
   m_Width: 0.558
   m_Softness: 0.92
   m_Color: {r: 0, g: 0.25, b: 1, a: 1}
   m_ColorMode: 2
-  m_EffectMaterial: {fileID: 21939717441729078, guid: 17b17d6effbe14075a3bbdf1fda1f6e1,
-    type: 2}
   m_Play: 0
   m_Duration: 1
   m_UpdateMode: 0
