@@ -31,7 +31,6 @@ namespace Coffee.UIExtensions
 		[SerializeField] [Range(0, 1)] float m_Softness = 0.5f;
 		[SerializeField] [ColorUsage(false)] Color m_Color = new Color(0.0f, 0.25f, 1.0f);
 		[SerializeField] ColorMode m_ColorMode = ColorMode.Add;
-//		[SerializeField] Material m_EffectMaterial;
 		[Space]
 		[SerializeField] bool m_Play = false;
 		[SerializeField][Range(0.1f, 10)] float m_Duration = 1;
@@ -118,11 +117,6 @@ namespace Coffee.UIExtensions
 		/// </summary>
 		public ColorMode colorMode { get { return m_ColorMode; } }
 
-//		/// <summary>
-//		/// Effect material.
-//		/// </summary>
-//		public virtual Material effectMaterial { get { return m_EffectMaterial; } }
-
 		/// <summary>
 		/// Play dissolve on enable.
 		/// </summary>
@@ -138,58 +132,6 @@ namespace Coffee.UIExtensions
 		/// </summary>
 		public AnimatorUpdateMode updateMode { get { return m_UpdateMode; } set { m_UpdateMode = value; } }
 
-		/// <summary>
-		/// This function is called when the object becomes enabled and active.
-		/// </summary>
-		protected override void OnEnable()
-		{
-			_time = 0;
-			base.OnEnable();
-		}
-
-//		/// <summary>
-//		/// This function is called when the behaviour becomes disabled () or inactive.
-//		/// </summary>
-//		protected override void OnDisable()
-//		{
-//			targetGraphic.material = null;
-//			base.OnDisable();
-//		}
-
-#if UNITY_EDITOR
-//		protected override void OnValidate ()
-//		{
-//			base.OnValidate ();
-//			EditorApplication.delayCall += () => UpdateMaterial(false);
-//		}
-//
-//		public override void OnAfterDeserialize()
-//		{
-//			EditorApplication.delayCall += () => UpdateMaterial (true);
-//		}
-//
-//		void UpdateMaterial(bool onlyEditMode)
-//		{
-//			if(!this || onlyEditMode && Application.isPlaying)
-//			{
-//				return;
-//			}
-//
-//			var mat = MaterialResolver.GetOrGenerateMaterialVariant(Shader.Find(shaderName), ToneMode.None, m_ColorMode, BlurMode.None);
-//
-//			if (m_EffectMaterial != mat || targetGraphic.material != mat)
-//			{
-//				targetGraphic.material = m_EffectMaterial = mat;
-//				EditorUtility.SetDirty(this);
-//				EditorUtility.SetDirty(targetGraphic);
-//			}
-//		}
-
-		protected override Material GetMaterial ()
-		{
-			return MaterialResolver.GetOrGenerateMaterialVariant(Shader.Find(shaderName), m_ColorMode);
-		}
-#endif
 
 		/// <summary>
 		/// Modifies the mesh.
@@ -227,6 +169,30 @@ namespace Coffee.UIExtensions
 			_time = 0;
 			m_Play = true;
 		}
+
+
+		//################################
+		// Protected Members.
+		//################################
+		/// <summary>
+		/// This function is called when the object becomes enabled and active.
+		/// </summary>
+		protected override void OnEnable()
+		{
+			_time = 0;
+			base.OnEnable();
+		}
+
+#if UNITY_EDITOR
+		/// <summary>
+		/// Gets the material.
+		/// </summary>
+		/// <returns>The material.</returns>
+		protected override Material GetMaterial ()
+		{
+			return MaterialResolver.GetOrGenerateMaterialVariant(Shader.Find(shaderName), m_ColorMode);
+		}
+#endif
 
 		//################################
 		// Private Members.
