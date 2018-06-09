@@ -154,12 +154,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 21939717441729078, guid: 17b17d6effbe14075a3bbdf1fda1f6e1,
     type: 2}
-  m_Location: 0.413
-  m_Width: 0.188
-  m_Softness: 0.522
+  m_Location: 0.6
+  m_Width: 0.46
+  m_Softness: 1
   m_Color: {r: 0, g: 0.25, b: 1, a: 1}
   m_ColorMode: 2
-  m_NoiseTexture: {fileID: 2800000, guid: 42fa8c34958b97442a6de1f23f479c99, type: 3}
+  m_NoiseTexture: {fileID: 0}
   m_Play: 0
   m_Duration: 1
   m_UpdateMode: 0
@@ -295,8 +295,8 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21939717441729078, guid: 17b17d6effbe14075a3bbdf1fda1f6e1,
     type: 2}
   m_Location: 0
-  m_Width: 0.558
-  m_Softness: 0.92
+  m_Width: 0.46
+  m_Softness: 1
   m_Color: {r: 0, g: 0.25, b: 1, a: 1}
   m_ColorMode: 2
   m_NoiseTexture: {fileID: 0}
@@ -513,7 +513,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 360215896}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 4d6a821aa5bb44df092d5b022d153f89, type: 2}
   m_CullingMode: 0
@@ -731,9 +731,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 21939717441729078, guid: 17b17d6effbe14075a3bbdf1fda1f6e1,
     type: 2}
-  m_Location: 0.37
-  m_Width: 0.558
-  m_Softness: 0.92
+  m_Location: 0.4
+  m_Width: 0.46
+  m_Softness: 1
   m_Color: {r: 0, g: 0.25, b: 1, a: 1}
   m_ColorMode: 2
   m_NoiseTexture: {fileID: 0}
@@ -941,6 +941,7 @@ GameObject:
   - component: {fileID: 1047477995}
   - component: {fileID: 1047477994}
   - component: {fileID: 1047477992}
+  - component: {fileID: 1047477993}
   m_Layer: 5
   m_Name: C
   m_TagString: Untagged
@@ -979,6 +980,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 2
   m_AspectRatio: 1.1574804
+--- !u!95 &1047477993
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1047477990}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9a6594445632047848b35c55f30ea032, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &1047477994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -992,12 +1010,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 21939717441729078, guid: 17b17d6effbe14075a3bbdf1fda1f6e1,
     type: 2}
-  m_Location: 0.413
-  m_Width: 0.558
-  m_Softness: 0.92
+  m_Location: 0.5
+  m_Width: 0.46
+  m_Softness: 1
   m_Color: {r: 0, g: 0.25, b: 1, a: 1}
   m_ColorMode: 2
-  m_NoiseTexture: {fileID: 2800000, guid: f3b45d5175ff30c42aab20cc35e51f4e, type: 3}
+  m_NoiseTexture: {fileID: 0}
   m_Play: 0
   m_Duration: 1
   m_UpdateMode: 0
