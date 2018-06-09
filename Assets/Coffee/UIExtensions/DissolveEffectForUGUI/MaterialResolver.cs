@@ -22,11 +22,14 @@ namespace Coffee.UIExtensions
 				.ToArray ();
 			Material mat = GetMaterial (shader, append);
 			if (mat) {
-				if(!mat.shaderKeywords.SequenceEqual(keywords))
+				if(!mat.shaderKeywords.OrderBy(x=>x).SequenceEqual(keywords.OrderBy(x=>x)))
 				{
 					mat.shaderKeywords = keywords;
 					EditorUtility.SetDirty (mat);
-					AssetDatabase.SaveAssets ();
+					if (!Application.isPlaying)
+					{
+						EditorApplication.delayCall += AssetDatabase.SaveAssets;
+					}
 				}
 				return mat;
 			}
