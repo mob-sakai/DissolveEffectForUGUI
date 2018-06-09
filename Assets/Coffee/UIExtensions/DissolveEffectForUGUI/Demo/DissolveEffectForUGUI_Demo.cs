@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Coffee.UIExtensions
 {
-	public class Demo_DissolveEffectForUGUI : MonoBehaviour
+	public class DissolveEffectForUGUI_Demo : MonoBehaviour
 	{
 		public void SetTimeScale(float scale)
 		{
