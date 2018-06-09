@@ -5,7 +5,7 @@ DissolveEffectForUGUI
 
 A dissolve effect for uGUI, without material instancing.
 
-![image](https://user-images.githubusercontent.com/12690315/40378145-a7c0c8e0-5e2d-11e8-8cdd-70e40bcf0c71.png)
+![](https://user-images.githubusercontent.com/12690315/41188348-c94311d6-6bf6-11e8-9bef-c3a52ead5724.gif)
 
 [![](https://img.shields.io/github/release/mob-sakai/DissolveEffectForUGUI.svg?label=latest%20version)](https://github.com/mob-sakai/DissolveEffectForUGUI/release)
 [![](https://img.shields.io/github/release-date/mob-sakai/DissolveEffectForUGUI.svg)](https://github.com/mob-sakai/DissolveEffectForUGUI/releases)
@@ -23,36 +23,29 @@ A dissolve effect for uGUI, without material instancing.
 <br><br><br><br>
 ## Description
 
-![image](https://user-images.githubusercontent.com/12690315/40378124-978278e8-5e2d-11e8-9b16-96aaa8c7bc87.png)
+![](https://user-images.githubusercontent.com/12690315/41188299-2f85c7b4-6bf6-11e8-8034-52d6b66945a1.png)
 
 DissolveEffectForUGUI applies _dissolve-effect_ to uGUI element (Image, RawImage, Text, etc...) **WITHOUT material instancing**.  
 This will suppress extra draw calls and improve performance.
 
 * Parameters
-    * Dissolve factor (inspector, script, animation)
-    * Edge width (inspector, script, animation)
-    * Edge color (inspector, script, animation)
-    * Edge softness (inspector, script, animation)
-    * Noise pattern image (in material)
-
-
-
-### New feature in v0.4.0
-
-From [UIEffect v2.4.0](https://github.com/mob-sakai/UIEffect)
-
-![v2.4.0](https://user-images.githubusercontent.com/12690315/40294019-a0bfb8aa-5d0e-11e8-8451-873502db6a99.gif)
-![editor](https://user-images.githubusercontent.com/12690315/40294212-9e1b1ce2-5d0f-11e8-88ce-78a8c0523dc2.png)
-
-* UIDissolve: Add color mode option.
-* UIDissolve: You can change the edge color, width, softness, color mode in inspector.
+  * Dissolve factor
+  * Edge width
+  * Edge color
+  * Edge color mode
+  * Edge softness
+  * Noise pattern image (shingle channel)
+  * Effect player
+    * Enable playing
+    * Duration
+    * Update mode
 
 
 <br><br><br><br>
 ## Demo
 
 * ![demo](https://user-images.githubusercontent.com/12690315/39131616-dcf7ea60-474a-11e8-8e20-f9e5bd8b3f5c.gif)
-    * Just 1 draw call!
+  * Just 1 draw call!
 
 [WebGL Demo](http://mob-sakai.github.io/DissolveEffectForUGUI)
 
@@ -80,7 +73,7 @@ From [UIEffect v2.4.0](https://github.com/mob-sakai/UIEffect)
 #### What's doing?
 
 * Control effect parameters for uGUI element WITHOUT MaterialPropertyBlock
-    * https://github.com/mob-sakai/UIEffect#how-to-control-effect-parameters-for-ugui-element-without-materialpropertyblock
+  * https://github.com/mob-sakai/UIEffect#how-to-control-effect-parameters-for-ugui-element-without-materialpropertyblock
 
 
 
