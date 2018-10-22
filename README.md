@@ -55,6 +55,8 @@ This will suppress extra draw calls and improve performance.
 
 1. Download DissolveEffectForUGUI.unitypackage from [Releases](https://github.com/mob-sakai/DissolveEffectForUGUI/releases).
 1. Import the package into your Unity project. Select `Import Package > Custom Package` from the `Assets` menu.
+1. In Unity5.6+, enable `TexCoord1` channel of canvas.  
+![](https://user-images.githubusercontent.com/12690315/46567584-3525f400-c970-11e8-9839-5c9e810b0b80.png)
 1. Add `DissolveEffectForUGUI` component to UI element (Image, RawImage, Text, etc...) from `Add Component` in inspector.
 1. Control effect parameters in inspector.  
 1. Enjoy!
