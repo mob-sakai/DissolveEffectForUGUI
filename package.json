@@ -5,6 +5,6 @@
     "type": "git",
     "url": "git+https://github.com/mob-sakai/DissolveEffectForUGUI.git"
   },
-  "src": "Assets/DissolveEffectForUGUI",
+  "src": "Assets/Coffee/UIExtensions/DissolveEffectForUGUI",
   "license": "MIT"
 }
